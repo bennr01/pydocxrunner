@@ -1,6 +1,6 @@
 # Pydocxrunner
 
-[![PyPI version](https://badge.fury.io/py/pydocxrunner.svg)](https://badge.fury.io/py/pydocxrunner)[![Build Status](https://travis-ci.org/bennr01/pydocxrunner.svg?branch=master)](https://travis-ci.org/bennr01/pydocxrunner)[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
+[![PyPI version](https://badge.fury.io/py/pydocxrunner.svg)](https://badge.fury.io/py/pydocxrunner) [![Build Status](https://travis-ci.org/bennr01/pydocxrunner.svg?branch=master)](https://travis-ci.org/bennr01/pydocxrunner) [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
 
 Is *Word* or *Libre Office Writer* you favorite IDE? Do you recognize *docx* as a superior file format? And are you tired of the high effort required to execute the code stored in `.docx`files? Then don't worry, `pydocxrunner`is the tool of your dreams. `pydocxrunner` provides a simple command to make a `.docx` file executable like any normal `.py` file.
 
@@ -56,6 +56,7 @@ Unknown to most, `.docx` files are `.zip` files with a fancy name. Also unknown 
 - This is not tested beyond a few simple statements
 - I do not recommend using this  tool for production
 - An internet connection is required when running `pydocxrunner` as `python-docx2txt` needs to be downloaded. No connection is required to actually execute the `.docx` file.
+- You still have to use `'` and `"` for strings, `„` and `“` will not work.
 
 
 
