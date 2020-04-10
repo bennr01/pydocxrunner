@@ -1,10 +1,12 @@
 # Pydocxrunner
 
-Is *Word* or *Libre Office Writer* you favorite IDE? Do you recognize *docx* as a superior file format? And are you tired of the high effort required to execute the code stored in `.docx`files? Then don't worry, `pydocxrunner`is the tool of your dreams. `pydocxrunner` provides a simple command to make a `.docx` file executable.
+[![PyPI version](https://badge.fury.io/py/pydocxrunner.svg)](https://badge.fury.io/py/pydocxrunner)[![Build Status](https://travis-ci.org/bennr01/pydocxrunner.svg?branch=master)](https://travis-ci.org/bennr01/pydocxrunner)[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
+
+Is *Word* or *Libre Office Writer* you favorite IDE? Do you recognize *docx* as a superior file format? And are you tired of the high effort required to execute the code stored in `.docx`files? Then don't worry, `pydocxrunner`is the tool of your dreams. `pydocxrunner` provides a simple command to make a `.docx` file executable like any normal `.py` file.
 
 ## Features
 
-- Make `.docx`file executable via the `python` command. Once the file is made executable, `pydocxrunner` is no longer required.
+- Make `.docx`files executable via the `python` command. Once the file is made executable, `pydocxrunner` is no longer required.
 - The `.docx` file can then be executed on any device with `python` installed.
 - What else do you need?
 
