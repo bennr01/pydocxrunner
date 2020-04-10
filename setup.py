@@ -6,7 +6,7 @@ from setuptools import setup
 
 setup(
     name="pydocxrunner",
-    version="0.0.2",
+    version="0.0.3",
     description="Make .docx files executable for the python interpreter",
     long_description=open('README.md', "r").read(),
     long_description_content_type="text/markdown",
