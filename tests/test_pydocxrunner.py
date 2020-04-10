@@ -14,7 +14,7 @@ class PydocxrunnerTests(unittest.TestCase):
     """
     Tests for pydocxrunner.
     """
-    def exec_in_tempdir(self, path):
+    def exec_in_tempdir(self, path, args=[]):
         """
         Copy & execute target docx file in a temporary directory, then
         return the output. Fail if the execution fails.
@@ -23,6 +23,8 @@ class PydocxrunnerTests(unittest.TestCase):
         
         @param path: path to execute
         @type path: L{str}
+        @param args: arguments to pass
+        @type args: L{list} of L{str}
         @return: the stdout output
         @rtype: L{str}
         """
@@ -35,7 +37,7 @@ class PydocxrunnerTests(unittest.TestCase):
             pydocxrunner.make_executable(tf)
             # run
             return subprocess.check_output(
-                ["python3", tf],
+                ["python3", tf] + args,
                 universal_newlines=True,
                 )
     
@@ -67,3 +69,13 @@ class PydocxrunnerTests(unittest.TestCase):
         path = self.get_sibling_path("square_numbers.docx")
         output = self.exec_in_tempdir(path)
         self.assertIn("0\n1\n4\n9\n16\n25\n36\n49\n64\n81", output)
+    
+    def test_heron(self):
+        """
+        Test the heron.docx file.
+        """
+        path = self.get_sibling_path("heron.docx")
+        testvalues = [("1", "1.0"), ("25", "5.0"), ("81.0", "9.0")]
+        for value, expected in testvalues:
+            output = self.exec_in_tempdir(path, args=[value])
+            self.assertIn(expected, output)

@@ -14,7 +14,9 @@ SCRIPT = """# -*- coding: utf-8 -*-
 '''
 This script executes the content of this docx file.
 '''
+import builtins
 import os
+
 import docx2txt
 
 
@@ -33,7 +35,12 @@ def execute(content):
     '''
     Execute the file content.
     '''
-    exec(content)
+    new_globals = {
+        "__name__": "__main__",
+        "__file__": os.path.dirname(__file__),
+        "__builtins__": builtins,
+        }
+    exec(content, new_globals)
 
 
 def main():
